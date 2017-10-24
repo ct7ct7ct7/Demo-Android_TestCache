@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:context="com.example.demo_android_test_cache.MainActivity">
+
+
+    <Button
+        android:id="@+id/ex1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="example 1 _ only max-age"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:text="最簡單的 cache - 使用 max-age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/ex2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="example 2 _ all"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:text="使用 max-age 與 驗證權杖( ETag 與 Last-Modified )"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/ex3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="example 3 _ Network Not Available"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:text="無網路狀態下強制使用 cache 資料"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
