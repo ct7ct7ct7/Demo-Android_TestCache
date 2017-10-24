@@ -2,6 +2,7 @@ package com.example.demo_android_test_cache;
 
 import android.content.Context;
 import android.util.Base64;
+import android.util.Log;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -33,7 +34,7 @@ public class CacheManager {
             bw.write(value);
             bw.close();
         } catch (IOException e) {
-            System.out.println(">>>>>>>>>>>>>>>>" +e.getMessage());
+            Log.e(CacheManager.class.getSimpleName(),e.getMessage());
         }
     }
 
@@ -54,19 +55,6 @@ public class CacheManager {
         for (File file : files) {
             file.delete();
         }
-    }
-
-
-    public long getDirSize() {
-        long size = 0;
-        File[] files = context.getCacheDir().listFiles();
-
-        for (File file : files) {
-            if (file.isFile()) {
-                size += file.length();
-            }
-        }
-        return size;
     }
 
     private String getEncodedFileName(String method, String url, Type type){
