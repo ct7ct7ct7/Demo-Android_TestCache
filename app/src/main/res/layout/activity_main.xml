@@ -39,11 +39,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="example 3 _ Network Not Available"/>
+        android:text="example 3 _ Do Yourself"/>
 
     <TextView
         android:layout_marginLeft="15dp"
-        android:text="無網路狀態下強制使用 cache 資料"
+        android:text="Server不支援/沒網路 時怎麼辦??"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>

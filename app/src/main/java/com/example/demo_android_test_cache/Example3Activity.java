@@ -58,7 +58,7 @@ public class Example3Activity extends AppCompatActivity {
             protected String doInBackground(Void... params) {
                 Request request = new Request.Builder()
                         .get()
-                        .url(ENDPOINT + "api/User")
+                        .url(ENDPOINT + "api/UserNoCache")
                         .build();
 
                 String log = "";
