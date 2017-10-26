@@ -1,5 +1,6 @@
 package com.example.demo_android_test_cache;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +51,14 @@ public class Example1Activity extends AppCompatActivity {
 
     @OnClick(R.id.fetchUserButton)
     public void onClickFetchUserButton() {
+        final ProgressDialog dialog = new ProgressDialog(this);
         AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {
+            @Override
+            protected void onPreExecute() {
+                dialog.show();
+                super.onPreExecute();
+            }
+
             @Override
             protected String doInBackground(Void... params) {
                 Request request = new Request.Builder()
@@ -84,8 +92,9 @@ public class Example1Activity extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(String log) {
-                super.onPostExecute(log);
                 resultTextView.setText(log);
+                dialog.dismiss();
+                super.onPostExecute(log);
             }
         };
         task.execute();
