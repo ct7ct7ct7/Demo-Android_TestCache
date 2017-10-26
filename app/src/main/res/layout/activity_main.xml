@@ -43,7 +43,7 @@
 
     <TextView
         android:layout_marginLeft="15dp"
-        android:text="Server不支援/沒網路 時怎麼辦??"
+        android:text="覆寫Cache-Control"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
